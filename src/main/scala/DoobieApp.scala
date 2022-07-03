@@ -66,7 +66,7 @@ object DoobieApp extends IOApp {
     } yield done).transact(xa)
 
   override def run(args: List[String]): IO[ExitCode] = {
-    deleteActorByName("Ezra Miller")
+    findAllActorNames
     .map(println)
     .as(ExitCode.Success)
   }
