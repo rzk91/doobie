@@ -4,6 +4,8 @@ name := "doobie-world"
 organization := "rzk.scala"
 version := "1.0"
 
+ThisBuild / scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.6.0"
+
 libraryDependencies ++= doobieDependencies ++ otherDependencies
 
 val DoobieVersion = "1.0.0-RC1"

@@ -10,12 +10,12 @@ import doobie.util.transactor.Transactor._
 object YoloApp extends App {
 
   import cats.effect.unsafe.implicits.global
-  
+
   val xa: Transactor[IO] = Transactor.fromDriverManager[IO](
-      "org.postgresql.Driver",
-      "jdbc:postgresql:myimdb",
-      "postgres",
-      "postgres"
+    "org.postgresql.Driver",
+    "jdbc:postgresql:myimdb",
+    "postgres",
+    "postgres"
   )
 
   val y = xa.yolo
